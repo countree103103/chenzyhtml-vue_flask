@@ -1,10 +1,3 @@
-AOS.init({
-    offset: 200,
-    duration: 600,
-    easing: 'ease-in-sine',
-    delay: 100
-});
-
 var lyb = new Vue({
     delimiters: ['~{', '}~'],
     el: '#message',
@@ -63,6 +56,7 @@ var lyb = new Vue({
                         $(this).remove();
                     })
                 });
+                aos();
             })
         },
         name: function() {
@@ -120,7 +114,17 @@ var oynn = new Vue({
         oynnn: function() {
             this.$nextTick(function() {
                 this.swiper();
+                aos();
             });
         }
     }
 });
+
+function aos() {
+    AOS.init({
+        offset: 200,
+        duration: 600,
+        easing: 'ease-in-sine',
+        delay: 100
+    });
+}
