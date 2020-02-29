@@ -1,8 +1,19 @@
 {% extends "base.html" %}
+{% block style %}
+<style type="text/css">
+	  /* body { background-image: url(/img/xjn.jpg);opacity: 1;} */
+/* section { background-color: rgba(255, 255, 255, 0.9); } */
+input { background-color: rgba(255, 255, 255, 0.6)!important; }
+textarea { background-color: rgba(255, 255, 255, 0.6)!important; }
+.form_alpha { background-color: rgba(255, 255, 255, 0.8)!important; }
+html,body { height: 100%; }
+</style>
+{% endblock %}
 {% block main %}
-	<div class="p-3 p-lg-5 d-flex flex-column text-center">
-		<h2 style="margin-bottom: 10%">登陆</h2>
-		<form class="form-control" style="padding:70px 0px" name="login_form" id="login_form" method="post" action="/login">
+	<div style="height: 100%;width: 100%;background-image: url(/img/xjn.jpg);position: absolute;right: 0;z-index: -1;opacity: .7"></div>
+	<div class="p-3 p-lg-5 d-flex flex-column text-center xjn">
+		<h2 style="margin-bottom: 10%;">登陆</h2>
+		<form class="form-control form_alpha" style="padding:70px 0px" name="login_form" id="login_form" method="post" action="/login">
 			<div class="form-group">
 				<label><h4 class="text-primary">用户名：</h4><input v-model="name" name="login_name" type="text" class="form-control" placeholder="请输入用户名"/></label>
 			</div>
