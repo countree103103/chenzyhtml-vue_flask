@@ -1,28 +1,5 @@
 # -*- coding: utf-8 -*
-from flask import Blueprint,render_template,redirect,url_for,make_response,session,jsonify
-from werkzeug.routing import BaseConverter
-from flask import request
-#from mongo import *
-from sql import *
-import time
-from datetime import timedelta
-import sys
-import os
-# from blog_ajax import *
-
-if(sys.version_info.major == 2):
-    reload(sys)
-    sys.setdefaultencoding('utf-8')
-
-#db=Mongo(host='localhost',db_name='sk')
-dbsql=Sqlite("./db/db.db")
-
-# 自定义正则转换器
-class RegexConverter(BaseConverter):
-    def __init__(self, url_map, *args):
-        super(RegexConverter, self).__init__(url_map)
-        # 将接受的第1个参数当作匹配规则进行保存
-        self.regex = args[0]
+from blog_config import *
 
 b_shouye=Blueprint('b_luyou',__name__,url_prefix='/')
 @b_shouye.route('/<re("(index.html){0,1}"):empty>',methods=['GET','POST'])
@@ -101,6 +78,17 @@ def lyb():
 def oynn():
     oynn=os.listdir("./static/img/oynn")
     return jsonify(oynn)
-##
+
+blog_ht=Blueprint('blog_ht',__name__,url_prefix='/')
+
+@blog_ht.route('/ht/articles/commit',methods=['GET','POST'])
+def article_commit():
+    if request.method == "POST":
+        bili = request.form
+        print(bili)
+        return bili['article']
+    else:
+        return render_template("ueditor.html")
+
 if __name__=="__main__":
     print(url_for('gallery'))
