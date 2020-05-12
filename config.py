@@ -11,7 +11,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 # 数据库初始化
 # db=Mongo(host='localhost',db_name='sk')
-dbsql = Sqlite("./db/db.db")
+# dbsql = Sqlite("./db/db.db")
 ormSqlite = SQLAlchemy()
 
 # 自定义正则转换器

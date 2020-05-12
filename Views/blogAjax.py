@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from config import *
 from flask import Blueprint
 from Models.lyb import lybModel

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from config import *
 
 blog_test = Blueprint('blog_test',__name__,url_prefix='/')

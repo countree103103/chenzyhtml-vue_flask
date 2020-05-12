@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from config import *
 from Models.users import userModel
 from sqlalchemy.exc import IntegrityError
