@@ -24,7 +24,7 @@ textarea { background-color: rgba(255, 255, 255, 0.6)!important; }
           <p>&nbsp;<a href="mailto:717662837@qq.com">717662837@qq.com</a></p>
         </div>
         <p class="mb-5">我是广州航海学院电商181的陈周煜，现在正在学习中...</p>
-        <p class="mb-5">Here is ChenZY studying in GuangZhou Hanghai University who is now studying...</p>
+        <p class="mb-5">Here is ChenZY who is now studying in GuangZhou Hanghai University...</p>
         <ul class="list-inline list-social-icons mb-0">
           <li class="list-inline-item">
             <a href="#">
@@ -189,8 +189,8 @@ textarea { background-color: rgba(255, 255, 255, 0.6)!important; }
     </section>
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="message">
       <div class="d-flex flex-column" v-for="data in lyb">
-        <h5>~{data[1]}~</h5> <time>~{data[3]}~</time>
-        <p style="display:inline;word-wrap:break-word;word-break:break-all;">~{data[2]}~</p>
+        <h5>~{data.guest_name}~</h5> <time>~{data.time}~</time>
+        <p style="display:inline;word-wrap:break-word;word-break:break-all;">~{data.guest_message}~</p>
       </div>
       <h1>留言</h1><br>
       <form class="" method="post" action="/ajax/lyb" id="lyb">

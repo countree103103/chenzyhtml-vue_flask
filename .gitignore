@@ -12,11 +12,13 @@ dist
 build
 .idea/
 __pycache__/
-/static/*
-!/static/vendor/
-!/static/js/
-!/static/css/
-!/static/favicon.ico
+*.jpg
+# /static
+# !/static/vendor/
+# !/static/js/
+# !/static/css/
+# !/static/favicon.ico
+# !/static/img/oynn/*
 
 # Vim
 *~
